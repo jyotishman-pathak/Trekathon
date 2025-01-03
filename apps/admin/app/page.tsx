@@ -1,9 +1,19 @@
+"use client"
+
 import React from 'react'
-const Home  = () => {
+
+const Home = () => {
+  const login = () => {
+    // Redirecting the user to the sign-in page
+    window.location.href = "http://localhost:3000/api/auth/signin";
+  }
 
   return (
-    <div>This is admin dashboard  </div>
+    <div>
+      <h1>This is the admin dashboard</h1>
+      <button onClick={login}>Login</button> {/* Button to trigger login */}
+    </div>
   )
 }
 
-export default Home 
+export default Home

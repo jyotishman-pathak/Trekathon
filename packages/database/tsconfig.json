@@ -9,10 +9,10 @@
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["*"]
     },
     "resolveJsonModule": true
   },
-  "include": ["src/**/*.ts", "prisma/**/*.ts"],
+  "include": ["src/**/*.ts", "prisma/**/*.ts", "index.ts"],
   "exclude": ["node_modules", "dist"]
 }

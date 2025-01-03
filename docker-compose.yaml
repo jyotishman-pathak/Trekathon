@@ -1,0 +1,19 @@
+version: '3.9' # Specify Docker Compose version
+
+services:
+  postgres:
+    image: postgres:latest # Use the latest PostgreSQL image
+    container_name: admin-postgres-db # Name of the container
+    restart: always # Restart the container automatically if it stops
+    environment:
+      POSTGRES_USER: admin # Set PostgreSQL username
+      POSTGRES_PASSWORD: admin123 # Set PostgreSQL password
+      POSTGRES_DB: postgres # Name of the default database
+    ports:
+      - "5432:5432" # Map container's port 5432 to host's port 5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Mount volume for data persistence
+
+volumes:
+  postgres_data:
+    driver: local # Use local storage for the volume
